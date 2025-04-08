@@ -1,3 +1,4 @@
+/* general css for all project */
 *{
     margin: 0;
     padding: 0%;
@@ -13,4 +14,48 @@ a{
 }
 ul , li{
     list-style-type: none;
+}
+/*  item css componant */
+.items{
+    display: grid;
+    row-gap: 50px;
+    column-gap: 90px;
+    padding:  100px ;
+    padding-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+/* padding betweeen sections css code componant */
+.paddingsection{
+    padding: 20px 0px 9px;
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    /* margin: 60px; */
+}
+.paddingsection::after{
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 120px;
+    background-color: #000000;
+    bottom: 0 ;
+    right: 50vw;
+    transform: translateX(50%);
+    border-radius: 5px;
+}
+
+/* a link button css */
+a.button_link{
+        background-color: #FF4141;
+        padding: 10px 30px;
+        border-radius: 25px;
+        color: white;
+        text-transform: capitalize;
+        font-size: 19px;
+}
+a.button_link:hover{
+    color: #ffb6b6;
+    /* font-size: 14px; */
 }
