@@ -1,0 +1,92 @@
+.Navbar{
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
+    background-color: rgb(255, 248, 248);
+
+}
+.Navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+.Navbar .logo img{
+    height: 80%;
+}
+.Navbar .links{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize;
+
+}
+.opened {
+    position: relative;
+    margin-bottom: 10px;
+}
+.opened::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 130%;
+    background-color: #FF4141;
+    bottom: -9px;
+    right: -20%;
+}
+
+.Navbar .buttons button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px 30px;
+    border: 1px solid #878383;
+    border-radius: 25px;
+    color: #878383;
+    cursor: pointer;
+}
+.Navbar .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.Navbar .buttons a{
+    
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+.Navbar .buttons a img{
+    height: 30px;
+    display: block;
+    
+}
+.Navbar .buttons  .true{
+    content: "";
+    position: absolute;
+    z-index: 4567890;
+    width: 14px;
+    height: 14px;
+    border-radius: 13px;
+    background-color: #FF4141;
+    top: 17px;
+    right: -4px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+/* animation */
+.Navbar .buttons button:hover{
+    color:#FF4141;
+    font-size: 15px;
+
+}
