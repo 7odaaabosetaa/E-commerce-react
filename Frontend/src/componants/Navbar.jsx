@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import logo from "../Assets/logo.png"
 import cart from "../Assets/cart_icon.png"
-import "./Navbar.css"
+import "./Navbar.css";
+import { Link } from 'react-router-dom';
 function Navbar() {
     let [opened, setOpened] = useState("shop");
     return (
@@ -10,11 +11,10 @@ function Navbar() {
                 <img src={logo} alt="" srcset="" /> <span>Ninja</span>
             </a>
             <div className="links">
-                {opened == "shop" ? <a href="#" className='opened'>shop </a> : <a href="#" onClick={() => { setOpened("shop") }}> shop </a>}
-                {opened == "men" ? <a href="#" className='opened'>men </a> : <a href="#" onClick={() => { setOpened("men") }} >men </a>}
-                {opened == "women" ? <a href="#" className='opened'>women </a> : <a href="#" onClick={() => { setOpened("women") }}>women </a>}
-                {opened == "kids" ? <a href="#" className='opened'>kids </a> : <a href="#" onClick={() => { setOpened("kids") }} >kids </a>}
-
+                {opened == "shop" ? <Link to="/" className='opened'>shop </Link> : <Link to="/" onClick={() => { setOpened("shop") }}> shop </Link>}
+                {opened == "men" ? <Link to="/men" className='opened'>men </Link> : <Link to="men" onClick={() => { setOpened("men") }} >men </Link>}
+                {opened == "women" ? <Link to="women" className='opened'>women </Link> : <Link to="women" onClick={() => { setOpened("women") }}>women </Link>}
+                {opened == "kids" ? <Link to="kids" className='opened'>kids </Link> : <Link to="kids" onClick={() => { setOpened("kids") }} >kids </Link>}
             </div>
             <div className="buttons">
                 <button>Login</button>

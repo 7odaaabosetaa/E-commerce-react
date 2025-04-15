@@ -9,7 +9,7 @@ import Item from '../../componants/item';
 import data_product from '../../Assets/data';
 import Panar from '../../componants/panar';
 import new_collections from '../../Assets/new_collections';
-
+import FooterShop from "../../componants/Footer"
 const Shop = () => {
     return (
         <div className='Shop'>
@@ -37,8 +37,15 @@ const Shop = () => {
                     return <Item img={item.image} info={item.name} newPrice={item.new_price} oldPrice={item.old_price} />
                 })}
             </div>
-            
-
+            <div className="subscribe">
+                <h3>get exclusive offers on ypur email</h3>
+                <p>subscribe to our newsletter and stay updated</p>
+                <div>
+                    <input type="email" name="" id="" placeholder='Your emil id' />
+                    <button className='button_link'> subscribe</button>
+                </div>
+            </div>
+           <FooterShop/>
         </div>
     );
 }

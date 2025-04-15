@@ -47,7 +47,7 @@ ul , li{
 }
 
 /* a link button css */
-a.button_link{
+.button_link{
         background-color: #FF4141;
         padding: 10px 30px;
         border-radius: 25px;
@@ -55,7 +55,7 @@ a.button_link{
         text-transform: capitalize;
         font-size: 19px;
 }
-a.button_link:hover{
+.button_link:hover{
     color: #ffb6b6;
     /* font-size: 14px; */
 }

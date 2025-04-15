@@ -85,8 +85,13 @@
     font-size: 12px;
 }
 /* animation */
+.Navbar .buttons a img:hover,
+.Navbar .buttons a:hover span,
+    .Navbar .buttons button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+
+}
 .Navbar .buttons button:hover{
     color:#FF4141;
-    font-size: 15px;
-
 }

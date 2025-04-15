@@ -36,3 +36,48 @@
     width: 100%;
     height: 90vh;
 }
+.subscribe {
+    margin: 50px 100px ;
+    background: linear-gradient(180deg,#fde1ff,#e1ffea22 60%);
+    display: flex;
+    /* justify-content:space-between; */
+    padding: 50px 100px;
+    /* height: 400px; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.subscribe h3 {
+    text-transform: capitalize;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.subscribe p {
+    color: #4b4b4b;
+    margin-bottom: 20px;
+}
+.subscribe div{
+    display: flex;
+    margin-top: 10px;
+
+}
+.subscribe input {
+    border: 1px solid #dddddd ;
+    outline: none;
+    font-size: 15px;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border-right-color: transparent;
+    width: 300px;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.subscribe button{
+    border: none;
+    outline: none;
+    margin-left: 19px;
+    background-color: black;
+}
+/*  */
