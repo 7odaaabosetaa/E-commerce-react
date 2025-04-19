@@ -1,6 +1,3 @@
-
-
-
 import './App.css'
 import Navbar from './componants/Navbar'
 import { HashRouter,Routes,Route } from 'react-router-dom'

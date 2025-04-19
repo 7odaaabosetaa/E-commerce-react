@@ -12,7 +12,6 @@ function  Item(props){
             <span className='new_price'> ${props.newPrice}  </span>
             <span className='old_price'> ${props.oldPrice}  </span>
             </div>
-
         </div>
     );
 };

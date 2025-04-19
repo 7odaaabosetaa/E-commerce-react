@@ -1,0 +1,26 @@
+.showing{
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.showing .left {
+    font-weight: 500;
+}
+.showMoreButton{
+
+text-align: center;
+}
+.showMoreButton button{
+    border: none;
+    outline: none;
+    background-color: #e0e0e0;
+    color: black;
+    border: 1px solid #e0e0e0;
+}
+.showMoreButton button:hover{
+    color: #FF4141;
+}
+
+
+

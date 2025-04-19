@@ -1,0 +1,6 @@
+.container{
+    margin: 50px 100px;
+}
+.container img {
+    width: calc(100% - 40px);
+}
