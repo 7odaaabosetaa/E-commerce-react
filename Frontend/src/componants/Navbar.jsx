@@ -1,10 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from "../Assets/logo.png"
 import cart from "../Assets/cart_icon.png"
 import "./Navbar.css";
 import { Link } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
+import { useLocation } from "react-router-dom"
+
+
 function Navbar() {
+    console.log(useLocation())
+
     let [opened, setOpened] = useState("shop");
+
+    let path = useLocation().pathname;
+
+    useEffect(() => {
+        if (path == '/men') {
+            setOpened("men")
+        }else if (path == '/women'){
+            setOpened("women")
+        }else if (path == '/kids'){
+            setOpened("kids")
+        }else{
+            setOpened("shop")
+        }
+
+    }, [opened ,path]);
+
+
     return (
         <div className='Navbar'>
             <a href="#" className='logo'>
