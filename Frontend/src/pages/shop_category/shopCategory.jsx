@@ -18,7 +18,7 @@ function ShopCategory(props) {
                 category={props.category}
             />
             <div className="showing">
-                <div className="left">showing 1-12 out of products </div>
+                <div className="left"> <span>Showing 1-12 </span>Out of products </div>
                 <div className="right">
                     <label for="cars">Sort by:</label>
                     <select name="cars" id="cars">

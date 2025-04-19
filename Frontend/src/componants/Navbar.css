@@ -30,8 +30,11 @@
 .opened {
     position: relative;
     margin-bottom: 10px;
+    transition-delay: 400ms;
+
 }
 .opened::after{
+    animation-delay: 0.5s;
     position: absolute;
     content: "";
     height: 3px;

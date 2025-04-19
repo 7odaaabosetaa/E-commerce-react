@@ -3,16 +3,26 @@ import logo from "../Assets/logo.png"
 import cart from "../Assets/cart_icon.png"
 import "./Navbar.css";
 import { Link } from 'react-router-dom';
-// import { useParams } from 'react-router-dom';
 import { useLocation } from "react-router-dom"
 
 
 function Navbar() {
     console.log(useLocation())
 
-    let [opened, setOpened] = useState("shop");
-
+    const [opened, setOpened] = useState("");
     let path = useLocation().pathname;
+
+    
+
+    // if (useLocation().pathname == '/men') {
+    //     setOpened("men")
+    // }else if (useLocation().pathname == '/women'){
+    //     setOpened("women")
+    // }else if (useLocation().pathname == '/kids'){
+    //     setOpened("kids")
+    // }else{
+    //     setOpened("shop")
+    // }
 
     useEffect(() => {
         if (path == '/men') {
@@ -25,8 +35,8 @@ function Navbar() {
             setOpened("shop")
         }
 
-    }, [opened ,path]);
-
+    }),[opened];
+    
 
     return (
         <div className='Navbar'>
