@@ -1,0 +1,68 @@
+.login{
+    background-color: #fde1ff;
+    height: calc(100vh - 80px);
+    /* margin-top: -0px; */
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.login .container {
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+
+}
+.login .container h3{
+    margin: 30px 0 20px;
+    font-size: 23px;
+    font-weight: 500;
+}
+.login .container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login .container form input.write{
+    border: 1px  solid #878383;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500 ;
+    text-transform: capitalize;
+    color: black;
+}
+.login .container form button{
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color:#FF4141;
+    color: white;
+    font-size: 18px;
+    font-weight: 500 ;
+    text-transform: capitalize;
+}
+.login .container form p{
+    color: #878383;
+}
+.login .container form p a{
+    color: #FF4141;
+
+}
+.login .container form p a:hover{
+    text-decoration: underline;
+}
+.login .container form div{
+    color: #878383;
+    font-size: 14px;
+}
+.login .container form input[type=checkbox] {
+    accent-color: #FF4141;
+    margin-right: 5px;
+    /* margin: 7px; */
+    line-height: normal;
+    width: 16px;
+    height: 16px;
+}
+

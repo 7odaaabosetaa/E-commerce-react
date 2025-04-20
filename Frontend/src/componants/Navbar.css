@@ -27,6 +27,13 @@
     text-transform: capitalize;
 
 }
+.Navbar .links a:hover{
+    color:#FF4141;
+    transform: scale(1.1);
+    transition: 0.3s;
+
+
+}
 .opened {
     position: relative;
     margin-bottom: 10px;
@@ -44,7 +51,7 @@
     right: -20%;
 }
 
-.Navbar .buttons button{
+.Navbar .buttons a.left{
     border: none;
     outline: none;
     background-color: transparent;
@@ -60,8 +67,7 @@
     align-items: center;
     gap: 20px;
 }
-.Navbar .buttons a{
-    
+.Navbar .buttons a.right{
     display:inline-flex;
     align-items: center;
     justify-content: center;
@@ -90,11 +96,11 @@
 /* animation */
 .Navbar .buttons a img:hover,
 .Navbar .buttons a:hover span,
-    .Navbar .buttons button:hover{
+    .Navbar .buttons a:hover{
     transform: scale(1.1);
     transition: 0.3s;
 
 }
-.Navbar .buttons button:hover{
+.Navbar .buttons a.left:hover{
     color:#FF4141;
 }

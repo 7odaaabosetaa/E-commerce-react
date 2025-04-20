@@ -50,8 +50,8 @@ function Navbar() {
                 {opened == "kids" ? <Link to="kids" className='opened'>kids </Link> : <Link to="kids" onClick={() => { setOpened("kids") }} >kids </Link>}
             </div>
             <div className="buttons">
-                <button>Login</button>
-                <a href="#" > <span className='true'>0</span> <img src={cart} alt="" /></a>
+                <Link to="/login" className='left'>Login</Link>
+                <a href="#" className='right' > <span className='true'>0</span> <img src={cart} alt="" /></a>
             </div>
         </div>
     );
