@@ -9,8 +9,16 @@ import Item from '../../componants/item';
 import data_product from '../../Assets/data';
 import Panar from '../../componants/panar';
 import new_collections from '../../Assets/new_collections';
-import FooterShop from "../../componants/Footer"
+import FooterShop from "../../componants/Footer";
+import { useContext } from 'react';
+import ShopContext from '../../componants/context/context';
+
+
 const Shop = () => {
+    const {item} = useContext(ShopContext);
+    console.log(item)
+
+
     return (
         <div className='Shop'>
             <div className='hero'>

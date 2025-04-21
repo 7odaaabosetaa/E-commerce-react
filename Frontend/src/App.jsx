@@ -4,11 +4,14 @@ import { HashRouter,Routes,Route } from 'react-router-dom'
 import Shop from './pages/shop/Shop';
 import ShopCategory from "./pages/shop_category/shopCategory"
 import Login from './pages/login/login';
+import ShopContext, { ShopProvider } from './componants/context/context';
+import { useContext } from 'react';
 
 
 function App() {
   return (
     <>
+    <ShopProvider>
     <HashRouter>
         <Navbar/>
         <Routes>
@@ -21,8 +24,7 @@ function App() {
           <Route path='/product' element={""}/>
         </Routes>
     </HashRouter>
-  
-    
+    </ShopProvider>
     </>
   )
 }
