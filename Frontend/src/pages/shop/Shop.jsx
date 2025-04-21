@@ -13,11 +13,9 @@ import FooterShop from "../../componants/Footer";
 import { useContext } from 'react';
 import ShopContext from '../../componants/context/context';
 
-
 const Shop = () => {
     const {item} = useContext(ShopContext);
     console.log(item)
-
 
     return (
         <div className='Shop'>

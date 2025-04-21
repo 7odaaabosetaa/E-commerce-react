@@ -33,7 +33,7 @@
     text-transform: capitalize;
     color: black;
 }
-.login .container form button{
+.login .container form button.submit{
     padding: 10px;
     outline: none;
     border: none;
@@ -46,11 +46,15 @@
 .login .container form p{
     color: #878383;
 }
-.login .container form p a{
+.login .container form p .signup{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
     color: #FF4141;
 
 }
-.login .container form p a:hover{
+.login .container form p .signup:hover{
     text-decoration: underline;
 }
 .login .container form div{
