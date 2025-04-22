@@ -15,7 +15,7 @@ import ShopContext from '../../componants/context/context';
 
 const Shop = () => {
     const {item} = useContext(ShopContext);
-    console.log(item)
+    // console.log(item)
 
     return (
         <div className='Shop'>
@@ -32,7 +32,7 @@ const Shop = () => {
             <div className="paddingsection">Populer in wemon </div>
             <div className="items">
                 {data_product.map((item) => {
-                    return <Item img={item.image} info={item.name} newPrice={item.new_price} oldPrice={item.old_price} />
+                    return <Item img={item.image} info={item.name} newPrice={item.new_price} oldPrice={item.old_price} id ={item.id}  />
                 })}
             </div>
             {/* paner section */}
@@ -40,14 +40,14 @@ const Shop = () => {
             <div className="paddingsection">new  collections </div>
             <div className="items">
                 {new_collections.map((item) => {
-                    return <Item img={item.image} info={item.name} newPrice={item.new_price} oldPrice={item.old_price} />
+                    return <Item img={item.image} info={item.name} newPrice={item.new_price} oldPrice={item.old_price} id ={item.id}  />
                 })}
             </div>
             <div className="subscribe">
                 <h3>get exclusive offers on ypur email</h3>
                 <p>subscribe to our newsletter and stay updated</p>
                 <div>
-                    <input type="email" name="" id="" placeholder='Your emil id' />
+                    <input type="email" name="" id="" placeholder='Your email id' />
                     <button className='button_link'> subscribe</button>
                 </div>
             </div>

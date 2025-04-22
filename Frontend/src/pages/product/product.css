@@ -1,0 +1,86 @@
+.product{
+    max-width: 82%;
+    margin: auto;
+    padding-top: 30px;
+}
+.product .tree{
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.product .main{
+    padding-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+.product .main .left {
+    display: flex;
+    gap: 15px;
+    /* display: none; */
+}
+.product .main .left .small{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.product .main .left .small img {
+    width: 78px;
+    aspect-ratio: auto;
+}
+.product .main .right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: black;
+    align-items: flex-start
+}
+.product .main .right h3{
+    font-size: 30px;
+    font-weight: 400;
+}
+.product .main .right .price .new{
+    color: #FF4141;
+    font-weight: 500;
+
+    
+}
+.product .main .right .price .old{
+    font-weight: 500;
+    text-decoration: line-through;
+    color: #807f7f;
+}
+.product .main .right p{
+    font-size: 17px;
+}
+.product .main .right  .size h4{
+    font-weight: 500;
+    font-size: 20px;
+    color: #807f7f;
+
+}
+.product .main .right  .size span{
+    padding: 10px 15px;
+    /* border: 1px solid black; */
+    margin-right: 20px ;
+    margin-top: 15px;
+    text-transform: capitalize;
+    background-color: #eeeeee;
+    display: inline-block;
+    cursor: pointer;
+}
+.product .main .right button{
+    padding: 10px 30px ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: #FF4141;
+    font-size: 18px;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+.product .main .right h5{
+    text-transform: ;
+}
+
+
+

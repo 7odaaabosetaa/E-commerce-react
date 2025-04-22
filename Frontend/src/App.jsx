@@ -6,6 +6,7 @@ import ShopCategory from "./pages/shop_category/shopCategory"
 import Login from './pages/login/login';
 import ShopContext, { ShopProvider } from './componants/context/context';
 import { useContext } from 'react';
+import Product from './pages/product/product';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
           <Route path='/kids' element={<ShopCategory category= "kid"/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/cart' element={""}/>
-          <Route path='/product' element={""}/>
+          <Route path='/product/:id' element={<Product/>}/>
         </Routes>
     </HashRouter>
     </ShopProvider>

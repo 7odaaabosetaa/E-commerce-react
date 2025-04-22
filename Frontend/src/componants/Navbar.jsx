@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom"
 
 
 function Navbar() {
-    console.log(useLocation())
+    // console.log(useLocation())
 
     const [opened, setOpened] = useState("");
     let path = useLocation().pathname;

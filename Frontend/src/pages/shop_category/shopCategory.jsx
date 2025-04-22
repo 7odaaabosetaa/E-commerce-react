@@ -39,6 +39,7 @@ function ShopCategory(props) {
                                 info={item.name}
                                 newPrice={item.new_price}
                                 oldPrice={item.old_price}
+                                id ={item.id} 
                             />
                         );
                     }
