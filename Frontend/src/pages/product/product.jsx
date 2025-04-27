@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import all_product from "../../Assets/all_product";
 import "./product.css";
+import ShopContext from '../../componants/context/context';
 
 const Product = () => {
     const {id} = useParams()
     let item = {}
+    const {AddToCart,cart} = useContext(ShopContext)
+    // const {cart } = useContext(ShopContext)
 
     all_product.map((e)=>{
         if (e.id == id){
@@ -53,7 +56,7 @@ const Product = () => {
                         <span>xl</span>
                         <span>xxl</span>
                     </div>
-                    <button className="addtocart">
+                    <button className="addtocart" onClick={()=>{AddToCart(item.id);}}>
                         add to cart 
                     </button>
                     <div className="details">

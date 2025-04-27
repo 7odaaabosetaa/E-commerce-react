@@ -1,11 +1,23 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 
 const ShopContext = createContext();
 
+
 export function  ShopProvider ({children}){
     
-    return (<ShopContext.Provider value={{ item : 4567890}}>{children}</ShopContext.Provider>);
+    const cart = [];
+    // var item = cart.length;
+    function AddToCart(item){
+        if(cart.includes(item) == true){
+            // console.log(cart.length)
+        }else{
+            cart.unshift(item)
+            console.log(cart)
+        }
+    }
+    
+    return (<ShopContext.Provider value={{ AddToCart,cart}}>{children}</ShopContext.Provider>);
 }
 
 export default ShopContext;

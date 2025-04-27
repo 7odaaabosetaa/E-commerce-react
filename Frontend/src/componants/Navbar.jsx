@@ -1,28 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import logo from "../Assets/logo.png"
-import cart from "../Assets/cart_icon.png"
+import cart_icon from "../Assets/cart_icon.png"
 import "./Navbar.css";
 import { Link } from 'react-router-dom';
 import { useLocation } from "react-router-dom"
+import ShopContext from './context/context';
 
 
 function Navbar() {
-    // console.log(useLocation())
+    const{cart} = useContext(ShopContext);
 
     const [opened, setOpened] = useState("");
     let path = useLocation().pathname;
 
-    
-
-    // if (useLocation().pathname == '/men') {
-    //     setOpened("men")
-    // }else if (useLocation().pathname == '/women'){
-    //     setOpened("women")
-    // }else if (useLocation().pathname == '/kids'){
-    //     setOpened("kids")
-    // }else{
-    //     setOpened("shop")
-    // }
 
     useEffect(() => {
         if (path == '/men') {
@@ -51,7 +41,7 @@ function Navbar() {
             </div>
             <div className="buttons">
                 <Link to="/login" className='left'>Login</Link>
-                <a href="#" className='right' > <span className='true'>0</span> <img src={cart} alt="" /></a>
+                <a href="#" className='right' > <span className='true'>{cart.length}</span> <img src={cart_icon} alt="" /></a>
             </div>
         </div>
     );
