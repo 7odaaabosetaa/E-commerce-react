@@ -41,7 +41,7 @@ function Navbar() {
             </div>
             <div className="buttons">
                 <Link to="/login" className='left'>Login</Link>
-                <a href="#" className='right' > <span className='true'>{cart.length}</span> <img src={cart_icon} alt="" /></a>
+                <Link to="/cart" className='right' > <span className='true'>{cart.length}</span> <img src={cart_icon} alt="" /></Link>
             </div>
         </div>
     );

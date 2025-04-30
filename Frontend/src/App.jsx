@@ -5,8 +5,8 @@ import Shop from './pages/shop/Shop';
 import ShopCategory from "./pages/shop_category/shopCategory"
 import Login from './pages/login/login';
 import ShopContext, { ShopProvider } from './componants/context/context';
-import { useContext } from 'react';
 import Product from './pages/product/product';
+import Cart from './pages/cart/cart';
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           <Route path='/women' element={<ShopCategory category= "women"/>}/>
           <Route path='/kids' element={<ShopCategory category= "kid"/>}/>
           <Route path='/login' element={<Login/>}/>
-          <Route path='/cart' element={""}/>
+          <Route path='/cart' element={<Cart/>}/>
           <Route path='/product/:id' element={<Product/>}/>
         </Routes>
     </HashRouter>

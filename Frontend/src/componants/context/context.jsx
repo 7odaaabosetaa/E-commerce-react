@@ -6,7 +6,7 @@ const ShopContext = createContext();
 
 export function  ShopProvider ({children}){
     
-    const cart = [];
+    const cart = [1,2,3,4,5,6];
     // var item = cart.length;
     function AddToCart(item){
         if(cart.includes(item) == true){
