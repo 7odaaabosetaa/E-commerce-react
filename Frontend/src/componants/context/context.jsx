@@ -1,23 +1,37 @@
 import { createContext, useState } from "react";
+import all_product from "../../Assets/all_product";
 
 
 const ShopContext = createContext();
 
-
-export function  ShopProvider ({children}){
-    
-    const cart = [1,2,3,4,5,6];
-    // var item = cart.length;
-    function AddToCart(item){
-        if(cart.includes(item) == true){
-            // console.log(cart.length)
-        }else{
-            cart.unshift(item)
-            console.log(cart)
+function getDefaultCart(){
+        let cart = {}
+        for (let index = 0; index < all_product.length+1; index++) {
+            cart[index] = 0;
         }
+        return cart
     }
     
-    return (<ShopContext.Provider value={{ AddToCart,cart}}>{children}</ShopContext.Provider>);
+
+export function  ShopProvider ({children}){
+    const [cartItems,setCartItem] = useState(getDefaultCart());
+
+    function addToCart (itemId){
+        setCartItem((prev)=>({...prev,[itemId]:prev[itemId]+1}))
+
+    }
+    function removeFromCart (itemId){
+        setCartItem((prev)=>({...prev,[itemId]:prev[itemId]-1}))
+
+    }
+
+
+
+    return (
+    <ShopContext.Provider value={{cartItems,addToCart,removeFromCart}}>
+        {children}
+    </ShopContext.Provider>
+    );
 }
 
 export default ShopContext;

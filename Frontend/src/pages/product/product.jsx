@@ -7,8 +7,7 @@ import ShopContext from '../../componants/context/context';
 const Product = () => {
     const {id} = useParams()
     let item = {}
-    const {AddToCart,cart} = useContext(ShopContext)
-    // const {cart } = useContext(ShopContext)
+    const {addToCart} = useContext(ShopContext);
 
     all_product.map((e)=>{
         if (e.id == id){
@@ -56,7 +55,7 @@ const Product = () => {
                         <span>xl</span>
                         <span>xxl</span>
                     </div>
-                    <button className="addtocart" onClick={()=>{AddToCart(item.id);}}>
+                    <button className="addtocart" onClick={()=>{addToCart(item.id);}}>
                         add to cart 
                     </button>
                     <div className="details">

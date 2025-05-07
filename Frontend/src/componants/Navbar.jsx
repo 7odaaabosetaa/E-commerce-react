@@ -8,7 +8,6 @@ import ShopContext from './context/context';
 
 
 function Navbar() {
-    const{cart} = useContext(ShopContext);
 
     const [opened, setOpened] = useState("");
     let path = useLocation().pathname;
@@ -41,7 +40,7 @@ function Navbar() {
             </div>
             <div className="buttons">
                 <Link to="/login" className='left'>Login</Link>
-                <Link to="/cart" className='right' > <span className='true'>{cart.length}</span> <img src={cart_icon} alt="" /></Link>
+                <Link to="/cart" className='right' > <span className='true'>{"2"}</span> <img src={cart_icon} alt="" /></Link>
             </div>
         </div>
     );
