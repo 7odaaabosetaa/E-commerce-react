@@ -11,11 +11,14 @@ import FooterShop from '../../componants/Footer';
 
 
 function Cart (){
-
-    const {cartItems,removeFromCart} = useContext(shopContext);
+    const {cartItems,removeFromCart, getItemsNumber,getTotalPrice,getSubTotalPrice} = useContext(shopContext);
+    
     return (
+        
         <div className='cart'>
-            <div className="cartitems">
+            
+            {getItemsNumber()== 0 ? <h2>there is no selected items we hobe you to find something that likes you </h2>:
+            <><div className="cartitems">
                 <div className="cartitems-format-main">
                     <p>products</p>
                     <p className='title'>title</p>
@@ -48,9 +51,9 @@ function Cart (){
             <div className='details'>
                 <div className="total">
                     <h2>Cart total</h2>
-                    <p> <span>subtotal</span> <span>$70</span></p>
+                    <p> <span>subtotal</span> <span>${getSubTotalPrice()}</span></p>
                     <p> <span>shipping fee</span> <span>free</span></p>
-                    <p className='totalprice'> <h4>total</h4> <span>$70</span></p>
+                    <p className='totalprice'> <span >total</span> <span>${getTotalPrice()}</span></p>
                     <button> Peoceed to checkout</button>
                 </div>
                 <div className="promocode">
@@ -62,7 +65,11 @@ function Cart (){
                 </div>
 
             </div>
-<FooterShop/>
+            </>
+            }
+            
+
+        <FooterShop/>
         </div>
     );
 }

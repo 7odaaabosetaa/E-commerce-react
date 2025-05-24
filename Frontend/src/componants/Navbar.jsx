@@ -5,12 +5,16 @@ import "./Navbar.css";
 import { Link } from 'react-router-dom';
 import { useLocation } from "react-router-dom"
 import ShopContext from './context/context';
+// import { useContext } from 'react';
 
 
 function Navbar() {
 
     const [opened, setOpened] = useState("");
     let path = useLocation().pathname;
+    const {getItemsNumber} = useContext(ShopContext);
+
+    
 
 
     useEffect(() => {
@@ -40,7 +44,9 @@ function Navbar() {
             </div>
             <div className="buttons">
                 <Link to="/login" className='left'>Login</Link>
-                <Link to="/cart" className='right' > <span className='true'>{"2"}</span> <img src={cart_icon} alt="" /></Link>
+                <Link to="/cart" className='right' > <span className='true'>
+                    {getItemsNumber()}
+                    </span> <img src={cart_icon} alt="" /></Link>
             </div>
         </div>
     );
