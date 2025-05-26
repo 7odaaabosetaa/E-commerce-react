@@ -34,5 +34,36 @@
 br{
     display: block;
     content: "";
-    margin-bottom: 17px;
  }
+ /* responsive  */
+ @media (max-width: 992px) {
+    .panar {
+        margin: 50px;
+        padding: 50px;
+    }
+    
+ }
+ @media (max-width: 767px) {
+    .panar{
+    margin: 30px;
+    padding: 20px;
+ }
+ .panar img {
+    display: none;
+ }
+.panar .text{
+    margin-top: -70px;
+    justify-content: center;
+    align-items: center;
+    /* align-items: center; */
+    text-align: center;
+    width: 100%;
+}
+.panar .text h3{
+    text-align: center;
+}
+.panar br {
+    margin-bottom: 0;
+    display: none;
+}
+}

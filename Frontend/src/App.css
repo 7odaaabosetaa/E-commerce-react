@@ -20,7 +20,7 @@ ul , li{
     display: grid;
     row-gap: 50px;
     column-gap: 90px;
-    padding:  100px ;
+    padding:  100px;
     padding-bottom: 50px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -32,7 +32,6 @@ ul , li{
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
-    /* margin: 60px; */
 }
 .paddingsection::after{
     position: absolute;
@@ -45,7 +44,6 @@ ul , li{
     transform: translateX(50%);
     border-radius: 5px;
 }
-
 /* a link button css */
 .button_link{
         background-color: #FF4141;
@@ -58,4 +56,17 @@ ul , li{
 .button_link:hover{
     color: #ffb6b6;
     /* font-size: 14px; */
+}
+
+@media (max-width: 767px) {
+    .paddingsection{
+        font-size: 25px;
+        padding: 0 0 10px;
+        margin-bottom: 40px;
+    }
+    .items {
+        padding: 30px;
+    }
+
+    
 }

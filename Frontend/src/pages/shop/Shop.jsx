@@ -10,12 +10,8 @@ import data_product from '../../Assets/data';
 import Panar from '../../componants/panar';
 import new_collections from '../../Assets/new_collections';
 import FooterShop from "../../componants/Footer";
-import { useContext } from 'react';
-import ShopContext from '../../componants/context/context';
 
 const Shop = () => {
-    const {item} = useContext(ShopContext);
-    // console.log(item)
 
     return (
         <div className='Shop'>
@@ -37,6 +33,8 @@ const Shop = () => {
             </div>
             {/* paner section */}
             <Panar img={girl} />
+            {/* paner section */}
+
             <div className="paddingsection">new  collections </div>
             <div className="items">
                 {new_collections.map((item) => {
@@ -44,7 +42,7 @@ const Shop = () => {
                 })}
             </div>
             <div className="subscribe">
-                <h3>get exclusive offers on ypur email</h3>
+                <h3>get exclusive offers on your email</h3>
                 <p>subscribe to our newsletter and stay updated</p>
                 <div>
                     <input type="email" name="" id="" placeholder='Your email id' />

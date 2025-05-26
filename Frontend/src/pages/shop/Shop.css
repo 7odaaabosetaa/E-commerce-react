@@ -80,4 +80,41 @@
     margin-left: 19px;
     background-color: black;
 }
-/*  */
+/* responsive  */
+
+@media (max-width: 992px) {
+    /* hero section */
+    .hero {
+        gap: 30px;
+        margin: 0;
+        padding: 50px;
+    }
+    .hero .left h2{
+        font-size: 30px;
+        width: 100%;
+        
+    }
+    .hero .left a{
+        font-size: 15px;
+        padding: 10px ;
+
+    }
+     .hero .right img {
+        height: 80vh ;
+ }
+    /* hero section */
+
+    
+}
+@media (max-width: 767px) {
+    /* hero section */
+    .hero{
+        justify-content: center;
+        align-items: center;
+    }
+     .hero .right{
+        display: none;
+     }
+    /* hero section */
+    
+}
