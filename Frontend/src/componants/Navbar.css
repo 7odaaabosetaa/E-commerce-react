@@ -3,6 +3,9 @@
     justify-content: space-around;
     height: 70px;
     background-color: rgb(255, 248, 248);
+    position: relative;
+    z-index: 23;
+    box-shadow: 0px 5px 7px 0px #a5a5a594;
 
 }
 .Navbar .logo {
@@ -37,7 +40,7 @@
 .opened {
     position: relative;
     margin-bottom: 10px;
-    transition-delay: 400ms;
+    transition-delay: 40ms;
 
 }
 .opened::after{
@@ -103,4 +106,54 @@
 }
 .Navbar .buttons a.left:hover{
     color:#FF4141;
+}
+.menu-icon{
+    display: none;
+}
+
+/* Responsive Screens */
+@media (max-width: 767px) {
+   .Navbar .links{
+        position: absolute;
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+        width: 40px;
+        cursor: pointer;
+    }
+    .Navbar .showlinks{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        background-color: inherit;
+        width: 100%;
+        left: 0;
+        gap: 20px;
+        padding: 30px 0;
+        box-shadow: 0px 5px 7px 0px #a5a5a594;
+        height: 250px;
+        z-index: 1;
+    }
+    
+}
+@media (max-width: 484px) {
+.Navbar .logo {
+    font-size:18px ;
+}
+.Navbar .logo img{
+    width: 40px;
+    height: 40px;
+}
+.Navbar .buttons a img{
+    width: 25px;
+    height: 25px;
+}
+.Navbar .buttons a.left{
+    padding: 6px 20px;
+    font-size: 14px;
+}
 }

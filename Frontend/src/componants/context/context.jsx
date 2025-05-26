@@ -6,8 +6,6 @@ import all_product from "../../Assets/all_product";
 const ShopContext = createContext();
 
 
-   
-
 function getDefaultCart(){
         let cart = {}
         for (let index = 0; index < all_product.length+1; index++) {
@@ -18,6 +16,7 @@ function getDefaultCart(){
     
 
 export function  ShopProvider ({children}){
+    
     const [cartItems,setCartItem] = useState(getDefaultCart());
     // const [totalPrice,setTotalPrice] = useState()
 
